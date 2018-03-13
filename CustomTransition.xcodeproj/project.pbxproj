@@ -15,6 +15,10 @@
 		25CEC068205818BF00AE0D84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CEC067205818BF00AE0D84 /* main.m */; };
 		25CEC072205818BF00AE0D84 /* CustomTransitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CEC071205818BF00AE0D84 /* CustomTransitionTests.m */; };
 		25CEC07D205818C000AE0D84 /* CustomTransitionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CEC07C205818C000AE0D84 /* CustomTransitionUITests.m */; };
+		25CEC08C205818F100AE0D84 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CEC08B205818F100AE0D84 /* FirstViewController.m */; };
+		25CEC08F2058190400AE0D84 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CEC08E2058190400AE0D84 /* SecondViewController.m */; };
+		25CEC09220581AFB00AE0D84 /* CustomAlertAnitmator.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CEC09120581AFB00AE0D84 /* CustomAlertAnitmator.m */; };
+		25CEC0952058221A00AE0D84 /* CustomPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CEC0942058221A00AE0D84 /* CustomPresentationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		25CEC078205818BF00AE0D84 /* CustomTransitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomTransitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CEC07C205818C000AE0D84 /* CustomTransitionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTransitionUITests.m; sourceTree = "<group>"; };
 		25CEC07E205818C000AE0D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25CEC08A205818F100AE0D84 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		25CEC08B205818F100AE0D84 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		25CEC08D2058190400AE0D84 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		25CEC08E2058190400AE0D84 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		25CEC09020581AFB00AE0D84 /* CustomAlertAnitmator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomAlertAnitmator.h; sourceTree = "<group>"; };
+		25CEC09120581AFB00AE0D84 /* CustomAlertAnitmator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAlertAnitmator.m; sourceTree = "<group>"; };
+		25CEC0932058221A00AE0D84 /* CustomPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPresentationController.h; sourceTree = "<group>"; };
+		25CEC0942058221A00AE0D84 /* CustomPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPresentationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,14 @@
 		25CEC04C205818BF00AE0D84 = {
 			isa = PBXGroup;
 			children = (
+				25CEC0932058221A00AE0D84 /* CustomPresentationController.h */,
+				25CEC0942058221A00AE0D84 /* CustomPresentationController.m */,
+				25CEC09020581AFB00AE0D84 /* CustomAlertAnitmator.h */,
+				25CEC09120581AFB00AE0D84 /* CustomAlertAnitmator.m */,
+				25CEC08D2058190400AE0D84 /* SecondViewController.h */,
+				25CEC08E2058190400AE0D84 /* SecondViewController.m */,
+				25CEC08A205818F100AE0D84 /* FirstViewController.h */,
+				25CEC08B205818F100AE0D84 /* FirstViewController.m */,
 				25CEC057205818BF00AE0D84 /* CustomTransition */,
 				25CEC070205818BF00AE0D84 /* CustomTransitionTests */,
 				25CEC07B205818C000AE0D84 /* CustomTransitionUITests */,
@@ -265,9 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25CEC0952058221A00AE0D84 /* CustomPresentationController.m in Sources */,
+				25CEC08F2058190400AE0D84 /* SecondViewController.m in Sources */,
 				25CEC05D205818BF00AE0D84 /* ViewController.m in Sources */,
 				25CEC068205818BF00AE0D84 /* main.m in Sources */,
+				25CEC09220581AFB00AE0D84 /* CustomAlertAnitmator.m in Sources */,
 				25CEC05A205818BF00AE0D84 /* AppDelegate.m in Sources */,
+				25CEC08C205818F100AE0D84 /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

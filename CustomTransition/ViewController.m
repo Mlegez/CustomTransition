@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "FirstViewController.h"
+#import "CustomPresentationController.h"
 
 @interface ViewController ()
 
@@ -16,8 +18,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.transitioningDelegate = self;
+    
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    [btn addTarget:self action:@selector(didaction) forControlEvents:UIControlEventTouchUpInside];
+    btn.backgroundColor = [UIColor redColor];
+    [self.view addSubview:btn];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
+
+- (void)didaction {
+//    lazy var customPresentationController: CustomPresentationController = [CustomPresentationController(presentedViewController: self.customPresentationSecondViewController, presentingViewController: self)
+    
+   FirstViewController *firstVc = [[FirstViewController alloc] init];
+   CustomPresentationController *vc =  [[CustomPresentationController alloc] initWithPresentedViewController:self presentingViewController:firstVc];
+    firstVc.transitioningDelegate = vc;
+    [self presentViewController:firstVc animated:YES completion:^{
+        
+    }];
+}
+
+
+
+
 
 
 - (void)didReceiveMemoryWarning {
