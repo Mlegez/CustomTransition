@@ -8,9 +8,9 @@
 
 #import "ViewController.h"
 #import "FirstViewController.h"
-#import "CustomPresentationController.h"
+#import "CustomTransitionDelegate.h"
 
-@interface ViewController ()
+@interface ViewController ()<UIViewControllerTransitioningDelegate>
 
 @end
 
@@ -32,8 +32,9 @@
 //    lazy var customPresentationController: CustomPresentationController = [CustomPresentationController(presentedViewController: self.customPresentationSecondViewController, presentingViewController: self)
     
    FirstViewController *firstVc = [[FirstViewController alloc] init];
-   CustomPresentationController *vc =  [[CustomPresentationController alloc] initWithPresentedViewController:self presentingViewController:firstVc];
-    firstVc.transitioningDelegate = vc;
+    CustomTransitionDelegate *delegate = [[CustomTransitionDelegate alloc] init];
+    firstVc.modalPresentationStyle = UIModalPresentationCustom;
+    firstVc.transitioningDelegate = delegate;;
     [self presentViewController:firstVc animated:YES completion:^{
         
     }];

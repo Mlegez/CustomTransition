@@ -18,7 +18,7 @@
 		25CEC08C205818F100AE0D84 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CEC08B205818F100AE0D84 /* FirstViewController.m */; };
 		25CEC08F2058190400AE0D84 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CEC08E2058190400AE0D84 /* SecondViewController.m */; };
 		25CEC09220581AFB00AE0D84 /* CustomAlertAnitmator.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CEC09120581AFB00AE0D84 /* CustomAlertAnitmator.m */; };
-		25CEC0952058221A00AE0D84 /* CustomPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CEC0942058221A00AE0D84 /* CustomPresentationController.m */; };
+		25CEC0982059825900AE0D84 /* CustomTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CEC0972059825900AE0D84 /* CustomTransitionDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +61,8 @@
 		25CEC08E2058190400AE0D84 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		25CEC09020581AFB00AE0D84 /* CustomAlertAnitmator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomAlertAnitmator.h; sourceTree = "<group>"; };
 		25CEC09120581AFB00AE0D84 /* CustomAlertAnitmator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAlertAnitmator.m; sourceTree = "<group>"; };
-		25CEC0932058221A00AE0D84 /* CustomPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPresentationController.h; sourceTree = "<group>"; };
-		25CEC0942058221A00AE0D84 /* CustomPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPresentationController.m; sourceTree = "<group>"; };
+		25CEC0962059825900AE0D84 /* CustomTransitionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTransitionDelegate.h; sourceTree = "<group>"; };
+		25CEC0972059825900AE0D84 /* CustomTransitionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTransitionDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +93,8 @@
 		25CEC04C205818BF00AE0D84 = {
 			isa = PBXGroup;
 			children = (
-				25CEC0932058221A00AE0D84 /* CustomPresentationController.h */,
-				25CEC0942058221A00AE0D84 /* CustomPresentationController.m */,
+				25CEC0962059825900AE0D84 /* CustomTransitionDelegate.h */,
+				25CEC0972059825900AE0D84 /* CustomTransitionDelegate.m */,
 				25CEC09020581AFB00AE0D84 /* CustomAlertAnitmator.h */,
 				25CEC09120581AFB00AE0D84 /* CustomAlertAnitmator.m */,
 				25CEC08D2058190400AE0D84 /* SecondViewController.h */,
@@ -285,12 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25CEC0952058221A00AE0D84 /* CustomPresentationController.m in Sources */,
 				25CEC08F2058190400AE0D84 /* SecondViewController.m in Sources */,
 				25CEC05D205818BF00AE0D84 /* ViewController.m in Sources */,
 				25CEC068205818BF00AE0D84 /* main.m in Sources */,
 				25CEC09220581AFB00AE0D84 /* CustomAlertAnitmator.m in Sources */,
 				25CEC05A205818BF00AE0D84 /* AppDelegate.m in Sources */,
+				25CEC0982059825900AE0D84 /* CustomTransitionDelegate.m in Sources */,
 				25CEC08C205818F100AE0D84 /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

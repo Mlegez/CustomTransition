@@ -17,15 +17,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor orangeColor];
     
-    self.preferredContentSize = CGSizeMake(300, 300);
-    
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGFloat height = [UIScreen mainScreen].bounds.size.height;
+    self.view.frame = CGRectMake((width - 300)/2.0, (height - 300)/2.0, 300, 300);
+    self.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+        
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     [btn addTarget:self action:@selector(didaction) forControlEvents:UIControlEventTouchUpInside];
     btn.backgroundColor = [UIColor redColor];
     [self.view addSubview:btn];
     
+}
+
+- (CGSize)preferredContentSize {
+    
+    return CGSizeMake(100, 100);
 }
 
 - (void)didaction {

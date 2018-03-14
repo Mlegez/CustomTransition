@@ -20,21 +20,26 @@
 // This method can only  be a nop if the transition is interactive and not a percentDriven interactive transition.
 // 设置动画的进行方式
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext{
-    UIViewController *fromViewController = [transitionContext viewForKey:UITransitionContextFromViewControllerKey];
-    UIViewController *toViewController = [transitionContext viewForKey:UITransitionContextToViewControllerKey];
     
     UIView *containerView = transitionContext.containerView;
-    UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
+
+    UIView *coverView = [[UIView alloc] initWithFrame:containerView.bounds];
+    coverView.backgroundColor = [UIColor colorWithWhite:0.7 alpha:0.3];
+    [containerView addSubview:coverView];
+    
+    // custom 模式下 直接使用viewforkey: presentingView会返回nil
+    UIViewController *presentedvc = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIViewController *presentingvc  =[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIView *fromView = presentingvc.view;
     UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
-    toView.frame = CGRectMake(fromView.frame.origin.x, fromView.frame.size.height/2, fromView.frame.size.height, fromView.frame.size.height);
-    toView.alpha = 0;
+    toView.transform = CGAffineTransformMakeScale(0.1, 0.1);
+    
     [containerView addSubview:toView];
     
     CGFloat duration = [self transitionDuration:transitionContext];
     // 使用spring动画，有弹簧效果，动画结束后一定要调用completeTransition方法
     [UIView animateWithDuration:duration delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:0 options:UIViewAnimationOptionCurveLinear animations:^{
-        toView.alpha = 1.0;
-        toView.frame = fromView.frame;
+        toView.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
         BOOL wascancel = [transitionContext transitionWasCancelled];
         [transitionContext completeTransition:!wascancel];
